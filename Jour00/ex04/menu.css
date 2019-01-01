@@ -1,0 +1,116 @@
+ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: cadetblue;
+}
+
+li
+{
+    float: left;
+}
+
+a
+{
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 14px 16px;
+}
+
+/******************************************************/
+
+.Dessert:hover .Dessertbtn 
+{
+    background-color: green;
+}
+
+.DessertContent
+{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 80px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.DessertContent a
+{
+    display: block;
+    color: black;
+}
+.Dessert:hover .DessertContent
+{
+    display: block;
+}
+
+.DessertContent a:hover
+{
+    background-color: red;
+}
+
+/******************************************/
+.Viandes:hover .Viandesbtn
+{
+    background-color: red;
+}
+
+.ViandesContent
+{
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 77px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.ViandesContent a
+{
+    display: block;
+    color: black;
+}
+
+.Viandes:hover .ViandesContent
+{
+    display: block;
+}
+
+.ViandesContent a:hover
+{
+    background-color: green;
+}
+
+/**************************************/
+
+.Poisson:hover .Poissonbtn
+{
+    background-color: black;
+}
+
+.PoissonContent
+{
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 82px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.PoissonContent a
+{
+    display: block;
+    color : black;
+}
+
+.Poisson:hover .PoissonContent
+{
+    display: block;
+}
+
+.PoissonContent a:hover
+{
+    background-color: darkslategrey;
+}

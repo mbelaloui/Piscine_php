@@ -1,0 +1,349 @@
+body
+{
+    background-color: #505050;
+}
+
+/* head */
+header
+{
+    position: relative;
+    margin-top: 13px;
+    margin-left: 113px;
+    width: 1051px;
+    height: 101px;
+    background-color: #909090;
+    border-radius: 6px;
+    box-shadow: 8px 8px 4px black;
+}
+
+#img_42
+{
+    margin-top: 8px;
+    margin-left: 8px;
+    height: 81px;
+    width: 315px;
+    float: left;
+}
+
+#loupe
+{
+
+    margin-left: 840px;
+    margin-top: -82px;
+    height: 109px;
+    width: 188px;
+    float: left;
+}
+
+#reload
+{
+    margin-left: 706px;
+    margin-top: 7px;
+    height: 16px;
+    width: 15px;
+}
+
+#close
+{
+    margin-top: 53px;
+    margin-left: 706px;
+    height: 14px;
+    width: 14px;
+}
+
+
+/* body */
+
+
+#page
+{
+  display: -webkit-inline-box;
+}
+
+
+/* left */
+#left
+{
+    margin-left: 135px;
+    margin-right: 15px;
+    width: 104px;
+    height: 315px;
+    background-color: #909090;
+    border-radius: 8px;
+    box-shadow: 8px 8px 8px black;
+/*    text-align: center;*/
+}
+
+#arraw
+{
+    margin-top: 11px;
+    margin-left : 25px;
+    width: 51px;
+    height: 52px;
+}
+
+#main
+{
+    margin-top: 5px;
+    margin-left : 24px;
+    width: 53px;
+    height: 51px;
+}
+
+#reb_box
+{
+    margin-left: 20px; 
+    width: 59px;
+    height: 55px;
+    border-radius: 3px;
+    background-color: red;
+}
+
+#oeil
+{
+    margin: 4px 4px 3px 4px;
+    width: 51px;
+    height: 47px;
+    background-color: #909090;
+}
+
+#outil
+{
+    margin-top: 4px;
+    margin-left: 24px;
+    width: 51px;
+    height: 51px;
+}
+
+#chat
+{
+    margin-top: 4px;
+    margin-left: 23px;
+    width: 53px;
+    height: 50px;
+}
+
+/* center */
+
+
+#center
+{
+    margin-left: 7px;
+    width: 755px;
+    height: 431px;
+    background-color: #909090;
+    border-radius: 8px;
+    box-shadow: 7px 8px 8px black;
+    text-align: center;
+}
+
+#clutser
+{
+    margin-left: 0px;
+    margin-top: 8px;
+    width: 740px;
+    height: 417px;
+}
+
+
+/* right */
+#right
+{
+    margin-left: 21px;
+    width: 104px;
+    height: 315px;
+    background-color: #909090;
+    border-radius: 8px;
+    box-shadow: 8px 7px 8px black;
+}
+
+#book
+{
+    margin-left: 27px;
+    margin-top: 12px;
+    width: 51px;
+    height: 71px;
+}
+
+#towel
+{
+    margin-top: 3px;
+    margin-left: 27px;
+    width: 51px;
+    height: 39px;
+}
+
+#wall
+{
+    position: relative;
+    margin-left: 8px;
+    width: 89px;
+    height: 52px;
+    
+    background-repeat: repeat;
+    background-color: red;
+    overflow: hidden;
+
+}
+
+.brick
+{
+    margin-left: -4px;
+    background-image: url("./resources/brick.jpg");
+    background-repeat: repeat-x;
+
+    width: 24px;
+    height: 24px;
+}
+
+#brick1
+{
+    margin-left: 0px;
+}
+
+#brick4
+{
+
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+#brick5
+{
+    position: absolute;
+    margin-top: 24px;
+    margin-left: 0;
+}
+
+#brick6
+{
+    position: absolute;
+    margin-top: 24px;
+    margin-left: -24px;
+}
+
+#brick7
+{
+    position: absolute;
+    margin-top: 24px;
+    margin-left: -48px;
+}
+
+#brick8
+{
+    position: absolute;
+    margin-top: 24px;
+    margin-left: -72px;
+}
+
+#brick9
+{
+    position: absolute;
+    margin-top: 48px;
+    margin-left: 0px;
+}
+
+#brick10
+{
+    position: absolute;
+    margin-top: 48px;
+    margin-left: -24px;
+}
+#brick11
+{
+    position: absolute;
+    margin-top: 48px;
+    margin-left: -48px;
+}
+
+#brick12
+{
+    position: absolute;
+    margin-top: 48px;
+    margin-left: -72px;
+}
+/*
+#brick2
+{
+    margin-left: -4px;
+}
+
+#brick3
+{
+    margin-left: -4px;
+}
+*/
+/* float */
+
+#float
+{
+    position: absolute;
+    margin-left: 79px;
+    margin-top: -55px;
+    border-radius: 8px;
+    width: 385px;
+    height: 125px;
+    background-color: lightgreen;
+    box-shadow: 8px 8px 8px black;
+}
+
+#msg_1
+{
+    font-size: 12px;
+    width: 350px;
+    margin-top: 10px;
+    margin-left: 8px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#Strong
+{
+    font-size: 21px;
+    font-weight: 550;
+    font-family: 'Courier New',monospace;
+    font-style: normal;
+}
+
+#msg_2
+{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11px;
+    width: 350px;
+    margin-top: -13px;
+    margin-left: 7px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+#shadow
+{
+    text-shadow: 3px 3px 4px red;
+    font-style: normal;
+}
+
+#feild
+{
+    border: 0.9px solid bisque;
+    border-top-color: 0.9px solid rgb(163, 135, 97);
+    border-left-color: 0.9px solid #505050;
+    position: absolute;
+    margin-top: -9px;
+    margin-left: 10px;
+    width: 278px;
+}
+
+#btn
+{
+    position: absolute;
+    margin-top: -9px;
+    margin-left: 298px;
+    width: 59px;
+
+    background-color: beige;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    font-family: monospace;
+    text-align: center;
+}

@@ -1,0 +1,888 @@
+<!doctype html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Mendeleïev</title>
+        <link rel="stylesheet" href="responsive.css">
+    </head>
+
+    <body>
+
+        <header>
+            <img src="https://www.larousse.fr/encyclopedie/data/images/1310399-Dmitri_Ivanovitch_Mendeleïev.jpg" alt="dimitri mendeleiv">
+        </header>
+
+        <table id="tableau" contenteditable="true">
+            <tr>
+
+                <td  id="h">
+                    <em class="name">Hydrogène</em><br>
+                    <em class="num">1</em><br>
+                    <em class="symbol">H</em><br>
+                    <em class="poid">1,0079</em>
+                </td>
+
+                <td  class="l" colspan="16"></td>
+            
+                <td  id="he">
+                        <em class="name">Hélium</em><br>
+                        <p class="num">2</p><br>
+                        <em class="symbol">He</em><br>
+                        <em class="poid">4,0026</em>
+                    </td>
+            </tr>
+            
+            <tr>
+
+                <td  id="li">
+                    <em class="name">Lithium</em><br>
+                    <em class="num">3</em><br>
+                    <em class="symbol">Li</em><br>
+                    <em class="poid">6,941</em>
+                </td>
+                
+                <td  id="be">
+                    <em class="name">Berryllium</em><br>
+                    <em class="num">4</em><br>
+                    <em class="symbol">Be</em><br>
+                    <em class="poid">9,0122</em>
+                </td>
+        
+                <td  class="l" colspan="10"></td>
+            
+                <td  id="b">
+                    <em class="name">Bore</em><br>
+                    <em class="num">5</em><br>
+                    <em class="symbol">B</em><br>
+                    <em class="poid">10,811</em>
+                </td>
+                
+                <td  id="c">
+                    <em class="name">Carbone</em><br>
+                    <em class="num">6</em><br>
+                    <em class="symbol">C</em><br>
+                    <em class="poid">12,0107</em>
+                </td>
+                
+                <td  id="n">
+                    <em class="name">Azote</em><br>
+                    <em class="num">7</em><br>
+                    <em class="symbol">N</em><br>
+                    <em class="poid">14,0067</em>
+                </td>
+                
+                <td  id="o">
+                    <em class="name">Oxygène</em><br>
+                    <em class="num">8</em><br>
+                    <em class="symbol">O</em><br>
+                    <em class="poid">15,9994</em>
+                </td>
+                
+                <td  id="f">
+                    <em class="name">Fluor</em><br>
+                    <em class="num">9</em><br>
+                    <em class="symbol">F</em><br>
+                    <em class="poid">18,9984</em>
+                </td>
+                
+                <td  id="ne">
+                    <em class="name">Néon</em><br>
+                    <em class="num">10</em><br>
+                    <em class="symbol">Ne</em><br>
+                    <em class="poid">20,1797</em>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td  id="na">
+                    <em class="name">Sodium</em><br>
+                    <em class="num">11</em><br>
+                    <em class="symbol">Na</em><br>
+                    <em class="poid">22,9897</em>
+                </td>
+                
+                <td  id="mg">
+                    <em class="name">Magnésium</em><br>
+                    <em class="num">12</em><br>
+                    <em class="symbol">Mg</em><br>
+                    <em class="poid">24,305</em>
+                </td>
+
+                <td  class="l" colspan="10"></td>
+
+                <td  id="al">
+                    <em class="name">Aluminum</em><br>
+                    <em class="num">13</em><br>
+                    <em class="symbol">Al</em><br>
+                    <em class="poid">26,9815</em>
+                </td>
+                
+                <td  id="si">
+                    <em class="name">Silicium</em><br>
+                    <em class="num">14</em><br>
+                    <em class="symbol">Si</em><br>
+                    <em class="poid">28,0855</em>
+                </td>
+                
+                <td  id="p">
+                    <em class="name">Phosphore</em><br>
+                    <em class="num">15</em><br>
+                    <em class="symbol">P</em><br>
+                    <em class="poid">30,9738</em>
+                </td>
+                
+                <td  id="s">
+                    <em class="name">Soufre</em><br>
+                    <em class="num">16</em><br>
+                    <em class="symbol">S</em><br>
+                    <em class="poid">32,065</em>
+                </td>
+                
+                <td  id="cl">
+                    <em class="name">Chlore</em><br>
+                    <em class="num">17</em><br>
+                    <em class="symbol">Cl</em><br>
+                    <em class="poid">35,453</em>
+                </td>
+            
+                <td  id="ar">
+                    <em class="name">Argon</em><br>
+                    <em class="num">18</em><br>
+                    <em class="symbol">Ar</em><br>
+                    <em class="poid">39,948</em>
+                </td>
+            </tr>
+
+            <tr>
+
+                <td  id="k">
+                    <em class="name">Potassium</em><br>
+                    <em class="num">19</em><br>
+                    <em class="symbol">K</em><br>
+                    <em class="poid">39,0983</em>
+                </td>
+                
+                
+                
+                <td  id="ca">
+                    <em class="name">Calcium</em><br>
+                    <em class="num">20</em><br>
+                    <em class="symbol">Ca</em><br>
+                    <em class="poid">40,078</em>
+                </td>
+                
+                <td  id="sc">
+                    <em class="name">Scandium</em><br>
+                    <em class="num">21</em><br>
+                    <em class="symbol">Sc</em><br>
+                    <em class="poid">44,9559</em>
+                </td>
+                
+                <td  id="ti">
+                    <em class="name">Titane</em><br>
+                    <em class="num">22</em><br>
+                    <em class="symbol">Ti</em><br>
+                    <em class="poid">47,867</em>
+                </td>
+                
+                <td  id="v">
+                    <em class="name">Vanadium</em><br>
+                    <em class="num">23</em><br>
+                    <em class="symbol">V</em><br>
+                    <em class="poid">50,9415</em>
+                </td>
+                
+                <td  id="cr">
+                    <em class="name">Chrome</em><br>
+                    <em class="num">24</em><br>
+                    <em class="symbol">Cr</em><br>
+                    <em class="poid">51,9961</em>
+                </td>
+                
+                <td  id="mn">
+                    <em class="name">Manganèse</em><br>
+                    <em class="num">25</em><br>
+                    <em class="symbol">Mn</em><br>
+                    <em class="poid">54,938</em>
+                </td>
+                
+                <td  id="fe">
+                    <em class="name">Fer</em><br>
+                    <em class="num">26</em><br>
+                    <em class="symbol">Fe</em><br>
+                    <em class="poid">55,845</em>
+                </td>
+                
+                <td  id="ni">
+                    <em class="name">Nickel</em><br>
+                    <em class="num">28</em><br>
+                    <em class="symbol">Ni</em><br>
+                    <em class="poid">58,6934</em>
+                </td>
+                
+                <td  id="co">
+                    <em class="name">Cobalt</em><br>
+                    <em class="num">27</em><br>
+                    <em class="symbol">Co</em><br>
+                    <em class="poid">58,9332</em>
+                </td>
+                
+                <td  id="cu">
+                    <em class="name">Cuivre</em><br>
+                    <em class="num">29</em><br>
+                    <em class="symbol">Cu</em><br>
+                    <em class="poid">63,546</em>
+                </td>
+                
+                <td  id="zn">
+                    <em class="name">Zinc</em><br>
+                    <em class="num">30</em><br>
+                    <em class="symbol">Zn</em><br>
+                    <em class="poid">65,39</em>
+                </td>
+                
+                <td  id="ga">
+                    <em class="name">Gallium</em><br>
+                    <em class="num">31</em><br>
+                    <em class="symbol">Ga</em><br>
+                    <em class="poid">69,723</em>
+                </td>
+                
+                <td  id="ge">
+                    <em class="name">Germanium</em><br>
+                    <em class="num">32</em><br>
+                    <em class="symbol">Ge</em><br>
+                    <em class="poid">72,64</em>
+                </td>
+                
+                <td  id="as">
+                    <em class="name">Arsenic</em><br>
+                    <em class="num">33</em><br>
+                    <em class="symbol">As</em><br>
+                    <em class="poid">74,9216</em>
+                </td>
+                
+                <td  id="se">
+                    <em class="name">Sélénium</em><br>
+                    <em class="num">34</em><br>
+                    <em class="symbol">Se</em><br>
+                    <em class="poid">78,96</em>
+                </td>
+                
+                <td  id="br">
+                    <em class="name">Brome</em><br>
+                    <em class="num">35</em><br>
+                    <em class="symbol">Br</em><br>
+                    <em class="poid">79,904</em>
+                </td>
+                
+                <td  id="kr">
+                    <em class="name">Krypton</em><br>
+                    <em class="num">36</em><br>
+                    <em class="symbol">Kr</em><br>
+                    <em class="poid">83,8</em>
+                </td>                
+            </tr>
+
+            <tr>
+                <td  id="rb">
+                    <em class="name">Rubidium</em><br>
+                    <em class="num">37</em><br>
+                    <em class="symbol">Rb</em><br>
+                    <em class="poid">85,4678</em>
+                </td>
+                
+                <td  id="sr">
+                    <em class="name">Strontium</em><br>
+                    <em class="num">38</em><br>
+                    <em class="symbol">Sr</em><br>
+                    <em class="poid">87,62</em>
+                </td>
+                
+                <td  id="y">
+                    <em class="name">Yttrium</em><br>
+                    <em class="num">39</em><br>
+                    <em class="symbol">Y</em><br>
+                    <em class="poid">88,9059</em>
+                </td>
+                
+                <td  id="zr">
+                    <em class="name">Zirconium</em><br>
+                    <em class="num">40</em><br>
+                    <em class="symbol">Zr</em><br>
+                    <em class="poid">91,224</em>
+                </td>
+                
+                <td  id="nb">
+                    <em class="name">Niobium</em><br>
+                    <em class="num">41</em><br>
+                    <em class="symbol">Nb</em><br>
+                    <em class="poid">92,9064</em>
+                </td>
+                
+                <td  id="mo">
+                    <em class="name">Molybdène</em><br>
+                    <em class="num">42</em><br>
+                    <em class="symbol">Mo</em><br>
+                    <em class="poid">95,94</em>
+                </td>
+                
+                <td  id="tc">
+                    <em class="name">Technetium</em><br>
+                    <em class="num">43</em><br>
+                    <em class="symbol">Tc</em><br>
+                    <em class="poid">98</em>
+                </td>
+                
+                <td  id="ru">
+                    <em class="name">Ruthenium</em><br>
+                    <em class="num">44</em><br>
+                    <em class="symbol">Ru</em><br>
+                    <em class="poid">101,07</em>
+                </td>
+                
+                <td  id="rh">
+                    <em class="name">Rhodium</em><br>
+                    <em class="num">45</em><br>
+                    <em class="symbol">Rh</em><br>
+                    <em class="poid">102,9055</em>
+                </td>
+                
+                <td  id="pd">
+                    <em class="name">Palladium</em><br>
+                    <em class="num">46</em><br>
+                    <em class="symbol">Pd</em><br>
+                    <em class="poid">106,42</em>
+                </td>
+                
+                <td  id="ag">
+                    <em class="name">Argent</em><br>
+                    <em class="num">47</em><br>
+                    <em class="symbol">Ag</em><br>
+                    <em class="poid">107,8682</em>
+                </td>
+                
+                <td  id="cd">
+                    <em class="name">Cadmium</em><br>
+                    <em class="num">48</em><br>
+                    <em class="symbol">Cd</em><br>
+                    <em class="poid">112,411</em>
+                </td>
+                
+                <td  id="in">
+                    <em class="name">Indium</em><br>
+                    <em class="num">49</em><br>
+                    <em class="symbol">In</em><br>
+                    <em class="poid">114,818</em>
+                </td>
+                
+                <td  id="sn">
+                    <em class="name">Etain</em><br>
+                    <em class="num">50</em><br>
+                    <em class="symbol">Sn</em><br>
+                    <em class="poid">118,71</em>
+                </td>
+                
+                <td  id="sb">
+                    <em class="name">Antimoine</em><br>
+                    <em class="num">51</em><br>
+                    <em class="symbol">Sb</em><br>
+                    <em class="poid">121,76</em>
+                </td>
+
+                <td  id="te">
+                    <em class="name">Tellure</em><br>
+                    <em class="num">52</em><br>
+                    <em class="symbol">Te</em><br>
+                    <em class="poid">127,6</em>
+                </td>
+                
+                <td  id="i">
+                    <em class="name">Iode</em><br>
+                    <em class="num">53</em><br>
+                    <em class="symbol">I</em><br>
+                    <em class="poid">126,9045</em>
+                </td>
+                
+                <td  id="xe">
+                    <em class="name">Xénon</em><br>
+                    <em class="num">54</em><br>
+                    <em class="symbol">Xe</em><br>
+                    <em class="poid">131,293</em>
+                </td>
+            </tr>
+
+            <tr>
+
+                <td  id="cs">
+                    <em class="name">Césium</em><br>
+                    <em class="num">55</em><br>
+                    <em class="symbol">Cs</em><br>
+                    <em class="poid">132,9055</em>
+                </td>
+                
+                <td  id="ba">
+                    <em class="name">Baryum</em><br>
+                    <em class="num">56</em><br>
+                    <em class="symbol">Ba</em><br>
+                    <em class="poid">137,327</em>
+                </td>
+
+                <td  class="l" colspan="1"></td>
+
+                <td  id="hf">
+                    <em class="name">Hafnium</em><br>
+                    <em class="num">72</em><br>
+                    <em class="symbol">Hf</em><br>
+                    <em class="poid">178,49</em>
+                </td>
+                
+                <td  id="ta">
+                    <em class="name">Tantale</em><br>
+                    <em class="num">73</em><br>
+                    <em class="symbol">Ta</em><br>
+                    <em class="poid">180,9479</em>
+                </td>
+                
+                <td  id="w">
+                    <em class="name">Tungstène</em><br>
+                    <em class="num">74</em><br>
+                    <em class="symbol">W</em><br>
+                    <em class="poid">183,84</em>
+                </td>
+                
+                <td  id="re">
+                    <em class="name">Rhenium</em><br>
+                    <em class="num">75</em><br>
+                    <em class="symbol">Re</em><br>
+                    <em class="poid">186,207</em>
+                </td>
+                
+                <td  id="os">
+                    <em class="name">Osmium</em><br>
+                    <em class="num">76</em><br>
+                    <em class="symbol">Os</em><br>
+                    <em class="poid">190,23</em>
+                </td>
+                
+                <td  id="ir">
+                    <em class="name">Iridium</em><br>
+                    <em class="num">77</em><br>
+                    <em class="symbol">Ir</em><br>
+                    <em class="poid">192,217</em>
+                </td>
+                
+                <td  id="pt">
+                    <em class="name">Platine</em><br>
+                    <em class="num">78</em><br>
+                    <em class="symbol">Pt</em><br>
+                    <em class="poid">195,078</em>
+                </td>
+                
+                <td  id="au">
+                    <em class="name">Or</em><br>
+                    <em class="num">79</em><br>
+                    <em class="symbol">Au</em><br>
+                    <em class="poid">196,9665</em>
+                </td>
+                
+                <td  id="hg">
+                    <em class="name">Mercure</em><br>
+                    <em class="num">80</em><br>
+                    <em class="symbol">Hg</em><br>
+                    <em class="poid">200,59</em>
+                </td>
+                
+                <td  id="tl">
+                    <em class="name">Thallium</em><br>
+                    <em class="num">81</em><br>
+                    <em class="symbol">Tl</em><br>
+                    <em class="poid">204,3833</em>
+                </td>
+                
+                <td  id="pb">
+                    <em class="name">Plomb</em><br>
+                    <em class="num">82</em><br>
+                    <em class="symbol">Pb</em><br>
+                    <em class="poid">207,2</em>
+                </td>
+                
+                <td  id="bi">
+                    <em class="name">Bismuth</em><br>
+                    <em class="num">83</em><br>
+                    <em class="symbol">Bi</em><br>
+                    <em class="poid">208,9804</em>
+                </td>
+                
+                <td  id="po">
+                    <em class="name">Polonium</em><br>
+                    <em class="num">84</em><br>
+                    <em class="symbol">Po</em><br>
+                    <em class="poid">209</em>
+                </td>
+                
+                <td  id="at">
+                    <em class="name">Astate</em><br>
+                    <em class="num">85</em><br>
+                    <em class="symbol">At</em><br>
+                    <em class="poid">210</em>
+                </td>
+                
+                <td  id="rn">
+                    <em class="name">Radon</em><br>
+                    <em class="num">86</em><br>
+                    <em class="symbol">Rn</em><br>
+                    <em class="poid">222</em>
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td  id="fr">
+                    <em class="name">Francium</em><br>
+                    <em class="num">87</em><br>
+                    <em class="symbol">Fr</em><br>
+                    <em class="poid">223</em>
+                </td>
+                
+                <td  id="ra">
+                    <em class="name">Radium</em><br>
+                    <em class="num">88</em><br>
+                    <em class="symbol">Ra</em><br>
+                    <em class="poid">226</em>
+                </td>
+                        
+                <td  class="l" colspan="1"></td>
+
+                <td  id="rf">
+                    <em class="name">Rutherfordium</em><br>
+                    <em class="num">104</em><br>
+                    <em class="symbol">Rf</em><br>
+                    <em class="poid">261</em>
+                </td>
+                
+                
+                <td  id="db">
+                    <em class="name">Dubnium</em><br>
+                    <em class="num">105</em><br>
+                    <em class="symbol">Db</em><br>
+                    <em class="poid">262</em>
+                </td>
+                
+                <td  id="sg">
+                    <em class="name">Seaborgium</em><br>
+                    <em class="num">106</em><br>
+                    <em class="symbol">Sg</em><br>
+                    <em class="poid">266</em>
+                </td>
+                
+                <td  id="bh">
+                    <em class="name">Bohrium</em><br>
+                    <em class="num">107</em><br>
+                    <em class="symbol">Bh</em><br>
+                    <em class="poid">264</em>
+                </td>
+                
+                <td  id="hs">
+                    <em class="name">Hassium</em><br>
+                    <em class="num">108</em><br>
+                    <em class="symbol">Hs</em><br>
+                    <em class="poid">277</em>
+                </td>
+                
+                <td  id="mt">
+                    <em class="name">Meitnerium</em><br>
+                    <em class="num">109</em><br>
+                    <em class="symbol">Mt</em><br>
+                    <em class="poid">268</em>
+                </td>
+                
+                <td  id="ds">
+                    <em class="name">Darmstadtium</em><br>
+                    <em class="num">110</em><br>
+                    <em class="symbol">Ds</em><br>
+                    <em class="poid">281</em>
+                </td>
+                
+                <td  id="rg">
+                    <em class="name">Roentgenium</em><br>
+                    <em class="num">111</em><br>
+                    <em class="symbol">Rg</em><br>
+                    <em class="poid">282</em>
+                </td>
+                
+                <td  id="cn">
+                    <em class="name">Copernicium</em><br>
+                    <em class="num">112</em><br>
+                    <em class="symbol">Cn</em><br>
+                    <em class="poid">285</em>
+                </td>
+                
+                <td  id="nh">
+                    <em class="name">Nihonium</em><br>
+                    <em class="num">113</em><br>
+                    <em class="symbol">Nh</em><br>
+                    <em class="poid">286</em>
+                </td>
+                
+                <td  id="fl">
+                    <em class="name">Flérovium</em><br>
+                    <em class="num">114</em><br>
+                    <em class="symbol">Fl</em><br>
+                    <em class="poid">289</em>
+                </td>
+                
+                <td  id="mc">
+                    <em class="name">Moscovium</em><br>
+                    <em class="num">115</em><br>
+                    <em class="symbol">Mc</em><br>
+                    <em class="poid">289</em>
+                </td>
+                
+                <td  id="lv">
+                    <em class="name">Livermorium</em><br>
+                    <em class="num">116</em><br>
+                    <em class="symbol">Lv</em><br>
+                    <em class="poid">293</em>
+                </td>
+                
+                <td  id="ts">
+                    <em class="name">Tennesse</em><br>
+                    <em class="num">117</em><br>
+                    <em class="symbol">Ts</em><br>
+                    <em class="poid">294</em>
+                </td>
+                
+                <td  id="og">
+                    <em class="name">Oganesson</em><br>
+                    <em class="num">118</em><br>
+                    <em class="symbol">Og</em><br>
+                    <em class="poid">294</em>
+                </td>
+                    
+            </tr>
+
+        </table>
+
+        <table id="tableau_bis" contenteditable="true">
+            <tr>
+
+                <td  id="la">
+                    <em class="name">Lanthane</em><br>
+                    <em class="num">57</em><br>
+                    <em class="symbol">La</em><br>
+                    <em class="poid">138,9055</em>
+                </td>
+                
+                <td  id="ce">
+                    <em class="name">Ceryum</em><br>
+                    <em class="num">58</em><br>
+                    <em class="symbol">Ce</em><br>
+                    <em class="poid">140,116</em>
+                </td>
+                
+                <td  id="pr">
+                    <em class="name">Praséodyme</em><br>
+                    <em class="num">59</em><br>
+                    <em class="symbol">Pr</em><br>
+                    <em class="poid">140,9077</em>
+                </td>
+                
+                <td  id="nd">
+                    <em class="name">Neodym</em><br>
+                    <em class="num">60</em><br>
+                    <em class="symbol">Nd</em><br>
+                    <em class="poid">144,24</em>
+                </td>
+                
+                <td  id="pm">
+                    <em class="name">Promethium</em><br>
+                    <em class="num">61</em><br>
+                    <em class="symbol">Pm</em><br>
+                    <em class="poid">145</em>
+                </td>
+                
+                <td  id="sm">
+                    <em class="name">Samarium</em><br>
+                    <em class="num">62</em><br>
+                    <em class="symbol">Sm</em><br>
+                    <em class="poid">150,36</em>
+                </td>
+                
+                <td  id="eu">
+                    <em class="name">Europium</em><br>
+                    <em class="num">63</em><br>
+                    <em class="symbol">Eu</em><br>
+                    <em class="poid">151,964</em>
+                </td>
+                
+                <td  id="gd">
+                    <em class="name">Gadolinium</em><br>
+                    <em class="num">64</em><br>
+                    <em class="symbol">Gd</em><br>
+                    <em class="poid">157,25</em>
+                </td>
+                
+                <td  id="tb">
+                    <em class="name">Terbium</em><br>
+                    <em class="num">65</em><br>
+                    <em class="symbol">Tb</em><br>
+                    <em class="poid">158,9253</em>
+                </td>
+                
+                <td  id="dy">
+                    <em class="name">Dysprosium</em><br>
+                    <em class="num">66</em><br>
+                    <em class="symbol">Dy</em><br>
+                    <em class="poid">162,5</em>
+                </td>
+                
+                <td  id="ho">
+                    <em class="name">Holmium</em><br>
+                    <em class="num">67</em><br>
+                    <em class="symbol">Ho</em><br>
+                    <em class="poid">164,9303</em>
+                </td>
+                
+                <td  id="er">
+                    <em class="name">Erbium</em><br>
+                    <em class="num">68</em><br>
+                    <em class="symbol">Er</em><br>
+                    <em class="poid">167,259</em>
+                </td>
+                
+                <td  id="tm">
+                    <em class="name">Thulium</em><br>
+                    <em class="num">69</em><br>
+                    <em class="symbol">Tm</em><br>
+                    <em class="poid">168,9342</em>
+                </td>
+                
+                <td  id="yb">
+                    <em class="name">Ytterbium</em><br>
+                    <em class="num">70</em><br>
+                    <em class="symbol">Yb</em><br>
+                    <em class="poid">173,04</em>
+                </td>
+                
+                <td  id="lu">
+                    <em class="name">Lutetium</em><br>
+                    <em class="num">71</em><br>
+                    <em class="symbol">Lu</em><br>
+                    <em class="poid">174,967</em>
+                </td>
+
+            </tr>
+            <tr>
+                <td  id="ac">
+                    <em class="name">Actinium</em><br>
+                    <em class="num">89</em><br>
+                    <em class="symbol">Ac</em><br>
+                    <em class="poid">227</em>
+                </td>
+                
+                <td  id="th">
+                    <em class="name">Thorium</em><br>
+                    <em class="num">90</em><br>
+                    <em class="symbol">Th</em><br>
+                    <em class="poid">232,0381</em>
+                </td>
+                
+                <td  id="pa">
+                    <em class="name">Protactinium</em><br>
+                    <em class="num">91</em><br>
+                    <em class="symbol">Pa</em><br>
+                    <em class="poid">231,0359</em>
+                </td>
+                
+                <td  id="np">
+                    <em class="name">Neptunium</em><br>
+                    <em class="num">93</em><br>
+                    <em class="symbol">Np</em><br>
+                    <em class="poid">237</em>
+                </td>
+                
+                <td  id="u">
+                    <em class="name">Uranium</em><br>
+                    <em class="num">92</em><br>
+                    <em class="symbol">U</em><br>
+                    <em class="poid">238,0289</em>
+                </td>
+                
+                <td  id="am">
+                    <em class="name">Americium</em><br>
+                    <em class="num">95</em><br>
+                    <em class="symbol">Am</em><br>
+                    <em class="poid">243</em>
+                </td>
+                
+                <td  id="pu">
+                    <em class="name">Plutonium</em><br>
+                    <em class="num">94</em><br>
+                    <em class="symbol">Pu</em><br>
+                    <em class="poid">244</em>
+                </td>
+                
+                <td  id="cm">
+                    <em class="name">Curium</em><br>
+                    <em class="num">96</em><br>
+                    <em class="symbol">Cm</em><br>
+                    <em class="poid">247</em>
+                </td>
+                
+                <td  id="bk">
+                    <em class="name">Berkelium</em><br>
+                    <em class="num">97</em><br>
+                    <em class="symbol">Bk</em><br>
+                    <em class="poid">247</em>
+                </td>
+                
+                <td  id="cf">
+                    <em class="name">Californium</em><br>
+                    <em class="num">98</em><br>
+                    <em class="symbol">Cf</em><br>
+                    <em class="poid">251</em>
+                </td>
+                
+                <td  id="es">
+                    <em class="name">Einsteinium</em><br>
+                    <em class="num">99</em><br>
+                    <em class="symbol">Es</em><br>
+                    <em class="poid">252</em>
+                </td>
+                
+                <td  id="fm">
+                    <em class="name">Fermium</em><br>
+                    <em class="num">100</em><br>
+                    <em class="symbol">Fm</em><br>
+                    <em class="poid">257</em>
+                </td>
+                
+                <td  id="md">
+                    <em class="name">Mendelevium</em><br>
+                    <em class="num">101</em><br>
+                    <em class="symbol">Md</em><br>
+                    <em class="poid">258</em>
+                </td>
+                
+                <td  id="no">
+                    <em class="name">Nobelium</em><br>
+                    <em class="num">102</em><br>
+                    <em class="symbol">No</em><br>
+                    <em class="poid">259</em>
+                </td>
+                
+                <td  id="lr">
+                    <em class="name">Lawrencium</em><br>
+                    <em class="num">103</em><br>
+                    <em class="symbol">Lr</em><br>
+                    <em class="poid">262</em>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

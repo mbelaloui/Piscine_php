@@ -1,0 +1,114 @@
+header
+{
+    text-align: center;
+}
+
+#tableau
+{
+    width:  75%;
+    height: 75%;
+    margin: auto;
+}
+
+#tableau_bis
+{
+    width:  75%;
+    min-width: 1091px;
+    margin: 30px auto;
+}
+
+td
+{
+    width:  5% ;
+    height: 5% ;
+    text-align: center;
+}
+
+.name
+{
+    position: relative;
+    top: 20px;
+    margin-top: 50px;
+    font-size: 12px;
+}
+
+.num
+{
+    position: relative;
+    float: left;
+    top: 49px;
+    font-size: 12px;
+}
+
+.symbol
+{
+    font-size: 25px;
+}
+
+.poid
+{
+    position: relative;
+    top : -64px;
+    float: right;
+    font-size: 12px;
+}
+
+.l
+{
+    border: none;
+}
+
+#li,#na,#k,#rb,#cs,#fr 
+{
+background-color: #FA5858; 
+}
+
+#be,#mg,#ca,#ca,#sr,#ba,#ra
+{
+    background-color: #F3E2A9;
+}
+
+#h,#c,#n,#o,#p,#s,#se
+{
+    background-color: #2EFE9A;
+}
+
+#f,#cl,#br,#i
+{
+    background-color: #F4FA58;
+}
+
+#he,#ne,#ar,#kr,#xe,#rn
+{
+    background-color: #81F7F3;
+}
+
+#al,#zn,#ga,#cd,#in,#sn,#hg,#tl,#pb,#bi,#po
+{
+    background-color: #BDBDBD;
+}
+
+#b,#si,#ge,#as,#sb,#te,#at
+{
+    background-color: #88aa00;
+}
+
+#sc,#ti,#v,#cr,#mn,#fe,#co,#ni,#cu,#y,#zr,#nb,#mo,#tc,#ru,#rh,#pd,#ag,#hf,#ta,#w,#re,#os,#ir,#pt,#au,#rf,#db,#sg,#bh,#hs,#cn
+{
+    background-color: #F6CED8;
+}
+
+#mt,#ds,#rg,#nh,#fl,#mc,#lv,#ts,#og
+{
+    background-color: #E6E6E6;
+}
+
+#la,#ce,#pr,#nd,#pm,#sm,#eu,#gd,#tb,#dy,#ho,#er,#tm,#yb,#lu
+{
+    background-color: #F6CEF5;
+}
+
+#ac,#th,#pa,#np,#u,#am,#pu,#cm,#bk,#cf,#es,#fm,#md,#no,#lr
+{
+    background-color: #FE2E9A;
+}
