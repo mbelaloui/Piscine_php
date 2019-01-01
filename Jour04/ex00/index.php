@@ -9,8 +9,7 @@
             Identifiant: <input type="text" name="login" value="<?php
                 if ($_GET["submit"] == "OK")
                     $_SESSION["login"] = $_GET["login"];
-                 echo $_SESSION["login"];
-              
+                 echo $_SESSION["login"];     
             ?>" />
             <br />
             Mot de passe: <input type="password" name="passwd" value="<?php
