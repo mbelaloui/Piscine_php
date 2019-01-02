@@ -1,5 +1,4 @@
 <?php
-    header('Location: speak.php');
     session_start();
     include ("auth.php");
 
@@ -13,7 +12,11 @@
     if ($_SESSION["loggued_on_user"] == "")
         echo "ERROR\n";
     else
+    {
         echo "OK\n";
+        include("chat.php");
+        include("speak.php");
+    }
 /*  test
 **  echo "ret ==> ".$_SESSION["loggued_on_user"];
 */
