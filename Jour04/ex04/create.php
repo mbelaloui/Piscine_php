@@ -1,4 +1,5 @@
 <?php
+    header('Location: index.html');
 
     function creat_file ($dir, $file)
     {
@@ -6,35 +7,6 @@
             mkdir($dir);
         if (!file_exists($file))
             file_put_contents($file, null, FILE_APPEND);
-    }
-
-    function put_file($url_file)
-    {
-        if (!file_exists($url_file))
-            echo "ERROR\n";
-        else
-        {
-            if (($data = file_get_contents($url_file)) === false)
-                echo "ERROR\n";
-            else
-            {
-                $file = unserialize($data);
-                if (empty($file))
-                    echo "ERROR\n";
-                else
-                {
-                    echo "<br />/*****************************/<br/><br />";
-                    foreach ($file as $elem)
-                    {
-                        echo "<br>$i<br />";
-                        print_r($elem);
-                        echo "<br>";
-                        $i++;
-                    }
-                    echo "<br />/*****************************/<br/><br />";
-                }
-            }
-        }
     }
 
     function is_login_existe($login, $file)
@@ -72,16 +44,13 @@
         return false;
     }
 
-    header('Location: index.html');
     if ($_POST['login'] != "" && $_POST['passwd'] != "" && $_POST['submit'] == "OK")
     {
         $dir = "../private";
         $url_file = "../private/passwd";
         creat_file ($dir, $url_file);
         if (add_compt($url_file, $_POST['login'], hash("whirlpool", $_POST['passwd'])))
-        {
             echo "OK\n";
-        }
         else
         {
             header('Location: create.html');
