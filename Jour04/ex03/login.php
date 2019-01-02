@@ -5,7 +5,7 @@
     function start_session($login, $passwd)
     {
         if (auth($login, $passwd))
-            return $login."/".$passwd;
+            return $login;
         return "";
     }
     $_SESSION["loggued_on_user"] = start_session($_GET['login'], $_GET['passwd']);
