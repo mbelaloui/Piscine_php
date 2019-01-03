@@ -10,7 +10,10 @@
     }
     $_SESSION["loggued_on_user"] = start_session($_POST['login'], $_POST['passwd']);
     if ($_SESSION["loggued_on_user"] == "")
+    {
+        header('Location: index.html');
         echo "ERROR\n";
+    }
     else
     {
         echo "OK\n";

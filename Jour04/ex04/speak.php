@@ -1,5 +1,6 @@
 <?php
     session_start();
+    header('Location: modif.html');
 
     function read_file($url_file)
     {
