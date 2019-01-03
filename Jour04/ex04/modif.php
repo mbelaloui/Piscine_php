@@ -1,9 +1,37 @@
 <?php
     header('Location: index.html');
 
+    function read_file($url_file)
+    {
+        if (!file_exists($dir))
+            return false;
+        $fp = fopen($url_file, "r");
+        if (flock($fp, LOCK_SH))
+        {
+            $ret = file_get_contents($url_file);
+            flock($fp, LOCK_UN);
+            return $ret;
+        } else
+            return false;
+    }
+
+    function write_file($url_file, $data)
+    {
+        if (!file_exists($dir))
+            return false;
+        $fp = fopen($url_file, "a");
+        if (flock($fp, LOCK_EX))
+        {
+            file_put_contents($url_file, $data);
+            flock($fp, LOCK_UN);
+            return true;
+        } else
+            return false;
+    }
+
     function modif_pass($url_file, $login, $oldpass, $newpass)
     {
-        if (!file_exists($url_file) || ($data = file_get_contents($url_file)) === false)
+        if (!file_exists($url_file) || ($data = read_file($url_file)) === false)
             return false;
         else
         {
@@ -18,7 +46,7 @@
                     {
                         $file[$key]["passwd"] = $newpass;
                         $data = serialize($file);
-                        file_put_contents($url_file, $data);
+                        write_file($url_file, $data);
                         return true;
                     }
                     else

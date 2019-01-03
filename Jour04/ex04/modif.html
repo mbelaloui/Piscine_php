@@ -3,20 +3,143 @@
     <head>
         <meta charset="utf-8" />
         <title>Page Title</title>
+        <style>
+            body
+            {
+                background-color:   rgb(102, 145, 170);
+            }
+
+            header
+            {
+                text-align: center;
+            }
+
+            header h1
+            {
+                font-size: 90px;
+            }
+
+            form
+            {
+                background-color: rgb(91, 139, 202);
+                border-radius: 10px;
+                box-shadow: 0px 0px 20px black;
+                border: 1px solid black;
+                margin: auto auto;
+                height: 300px;
+                width: 600px;
+            }
+            #accueille_label
+               {
+                    position: relative;
+                    left: 520px;
+               }
+
+                #input
+                {
+                    margin-top: 90px;
+                    width: 100%;
+                }
+
+                #inscription_label
+                {
+                    color: aliceblue;
+                    position: relative;
+                    font-size: 30px;
+                    margin-left: 15%;
+                }
+
+                #name_label
+                {
+                    position: relative;
+                    top: -30px;
+                    font-size: 25px;
+                    margin-left: 5%;
+                }
+
+                #name_input
+                {
+                    position: relative;
+                    top: -30px;
+                    left: 30px;
+                    width: 290px;
+                    font-size: 30px;
+                    margin-left: 100px;
+                }
+
+                #old_pass_label
+                {
+                    position: relative;
+                    top: -20px;
+                    font-size: 25px;
+                    margin-left: 5%;
+                }
+                
+                #new_pass_label
+                {
+                    position: relative;
+                    top: -10px;
+                    font-size: 25px;
+                    margin-left: 5%;
+                }
+
+                #newpwd_input
+                {
+                    position: relative;
+                    top: -10px;
+                    width: 290px;
+                    font-size: 30px;
+                    margin-left: 7px;
+                }
+
+                #oldpwd_input
+                {
+                    position: relative;
+                    top: -20px;
+                    width: 290px;
+                    font-size: 30px;
+                    margin-left: 25px;
+                }
+
+                 .link
+                {
+                    text-decoration: none;
+                    color: white;
+                }
+
+                .link:hover
+                {
+                    color:  rgb(15, 113, 204);
+                }
+
+                #submit_button
+                {
+                    margin-top: 0px;
+                    width: 550px;
+                    font-size: 60px;
+                    margin-left: 25px;
+                }
+        </style>
     </head>
     <body>
         <header>
                 <h1>Modifier mot de passe</h1>
         </header>
         <form action="modif.php" method="post">
-            Identifiant <input type="text" name="login" />
-            <br />
-            Ancien mot de passe <input type="password" name="oldpw" />
-            <br />
-            Nouveau mot de passe <input type="password" name="newpw" />
-            <br />
-            <input type="submit" name="submit" value="OK" />
-            <a href="index.html">Accueille</a>
+                <a href="index.html" id="accueille_label">Accueille</a>
+                <span id="inscription_label">modifier mot de pass</span>
+                <div id=input>
+                    <span name="id" id="name_label" class="input">Identifiant :</span>
+                    <input type="text" name="login" id="name_input" />
+                    <br />
+                    <span name="mdp" id="old_pass_label" class="input">Ancien mot de passe :</span>
+                    <input type="password" name="oldpw" id="oldpwd_input"/>
+                    <br />
+                    <span name="mdp" id="new_pass_label" class="input">Nouveau mot de passe :</span>
+                    <input type="password" name="newpw" id="newpwd_input"/>
+                    <br />
+                    <input type="submit" name="submit" id="submit_button" value="OK"  />
+                </div>
         </form>
     </body>
 </html>

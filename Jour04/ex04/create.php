@@ -1,6 +1,34 @@
 <?php
     header('Location: index.html');
 
+    function read_file($url_file)
+    {
+        if (!file_exists($dir))
+            return false;
+        $fp = fopen($url_file, "r");
+        if (flock($fp, LOCK_SH))
+        {
+            $ret = file_get_contents($url_file);
+            flock($fp, LOCK_UN);
+            return $ret;
+        } else
+            return false;
+    }
+
+    function write_file($url_file, $data)
+    {
+        if (!file_exists($dir))
+            return false;
+        $fp = fopen($url_file, "a");
+        if (flock($fp, LOCK_EX))
+        {
+            file_put_contents($url_file, $data);
+            flock($fp, LOCK_UN);
+            return true;
+        } else
+            return false;
+    }
+
     function creat_file ($dir, $file)
     {
         if (!file_exists($dir))
@@ -23,13 +51,12 @@
 
     function add_compt($url_file, $login, $passwd)
     {
-        //struct    [[key=>val;key=>val],[key=>val;key=>val],[key=>val;key=>val],....]
         $elem = array
             (   
                 "login" => $login,
-                "passwd" => $passwd/// hache la passe
+                "passwd" => $passwd
             );
-        if (($data = file_get_contents($url_file)) === false)
+        if (($data = read_file($url_file)) === false)
             return false;
         else
         {
@@ -38,7 +65,7 @@
                 return false;
             $file[] = $elem;
             $data = serialize($file);
-            file_put_contents($url_file, $data);
+            write_file($url_file, $data);
             return true;
         }
         return false;

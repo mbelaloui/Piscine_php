@@ -3,10 +3,16 @@
     <head>
         <title>Chat ex04</title>
         <style>
+            body
+            {
+                background-color:   rgb(102, 145, 170);
+            }
+
             header
             {
                 text-align: center;
             }
+
             header h1
             {
                 font-size: 90px;
@@ -14,10 +20,95 @@
 
             form
             {
+                background-color: rgb(91, 139, 202);
+                border-radius: 10px;
+                box-shadow: 0px 0px 20px black;
                 border: 1px solid black;
-                height: 200px;
-                width: 300px;
+                margin: auto auto;
+                height: 300px;
+                width: 500px;
+            }
+
+            #inscription_link
+            {
                 position: relative;
+                left: 405px;
+            }
+
+            #input
+            {
+                width: 100%;
+                height: 150px;
+            }
+
+            #connexion_label
+            {
+                color: aliceblue;
+                position: relative;
+                top: -20px;
+                font-size: 30px;
+                margin-left: 35%;
+            }
+
+            #name_label
+            {
+                position: relative;
+                top: -30px;
+                font-size: 25px;
+                margin-left: 5%;
+            }
+
+            #name_input
+            {
+                position: relative;
+                top: -30px;
+                left: 30px;
+                width: 270px;
+                font-size: 30px;
+                margin-left: 5%;
+            }
+
+            #pass_label
+            {
+                position: relative;
+                top: -10px;
+                font-size: 25px;
+                margin-left: 5%;
+            }
+
+            #pass_input
+            {
+                position: relative;
+                top: -10px;
+                width: 270px;
+                font-size: 30px;
+                margin-left: 5%;
+            }
+            
+            #modif_pass_link
+            {
+                position: relative;
+                left: 340px;
+            }
+
+            
+            .link
+            {
+                text-decoration: none;
+                color: white;
+            }
+
+            .link:hover
+            {
+                color:  rgb(15, 113, 204);
+            }
+
+            #submit_button
+            {
+                margin-top: 30px;
+                width: 450px;
+                height: 40px;
+                margin-left: 25px;
             }
 
         </style>
@@ -27,14 +118,18 @@
                 <h1>Accueille</h1>
         </header>
         <form action="login.php" method="post">
-            <span>Connexion</span><br /><br />
-            <span name="id">Identifiant</span><input type="text" name="login" />
-            <br />
-            <span name="mdp">Mot de passe</span><input type="password" name="passwd" />
-            <br />
-            <input type="submit" name="submit" value="OK" /><br /><br />
-            <a href="create.html">Inscription</a><br /><br /><br />
-            <a href="modif.html">Modifier mot de pass</a>
+            <a href="create.html" id="inscription_link" class="link">Inscription</a><br /><br /><br />
+            <div id=input>
+                <span id="connexion_label">Connexion</span><br /><br />
+                <span name="id" id="name_label" class="input">Identifiant :</span>
+                <input type="text" name="login" id="name_input" />
+                <br />
+                <span name="mdp" id="pass_label" class="input">Mot de passe :</span>
+                <input type="password" name="passwd" id="pass_input" />
+                <br />
+                <a href="modif.html" id="modif_pass_link" class="link">Modifier mot de pass</a>
+            </div>
+           <input type="submit" name="submit" id="submit_button" value="OK" />
         </form>
     </body>
 </html>

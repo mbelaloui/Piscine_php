@@ -49,6 +49,27 @@
         return false;
     }
 
+    function read_file($url_file)
+    {
+        if (flock($url_file, LOCK_EX))
+        {
+            $ret = file_get_contents($url_file);
+            flock($url_file, LOCK_UN);
+            return $ret;
+        } else
+            return false;
+    }
+
+    function write_file($url_file, $data)
+    {
+        if (flock($url_file, LOCK_EX))
+        {
+            file_put_contents($url_file, $data);
+            flock($url_file, LOCK_UN);
+        } else
+            return false;
+    }
+
     function add_compt($url_file, $login, $passwd)
     {
         //struct    [[key=>val;key=>val],[key=>val;key=>val],[key=>val;key=>val],....]
@@ -57,7 +78,7 @@
                 "login" => $login,
                 "passwd" => $passwd/// hache la passe
             );
-        if (($data = file_get_contents($url_file)) === false)
+        if (($data = read_file($url_file)) === false)
             return false;
         else
         {
@@ -66,7 +87,7 @@
                 return false;
             $file[] = $elem;
             $data = serialize($file);
-            file_put_contents($url_file, $data);
+            write_file($url_file, $data);
             return true;
         }
         return false;
