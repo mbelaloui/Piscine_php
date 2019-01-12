@@ -69,12 +69,19 @@
         return ($temp);
     }
 
+    function is_alpha($elem)
+    {
+        if (ctype_alnum ($elem) && !is_numeric($elem))
+            return (true);
+        return (false);
+    }
+
     function extract_alpha($tab)
     {
         $temp = array();
         foreach ($tab as $elem)
         {
-            if (ctype_alpha($elem))
+            if (is_alpha($elem))
             {
                 $e = array($elem);
                 $temp = array_merge($temp, $e);
@@ -88,7 +95,7 @@
         $temp = array();
         foreach ($tab as $elem)
         {
-            if (!ctype_alpha($elem) && !is_numeric($elem))
+            if (!is_alpha($elem) && !is_numeric($elem))
             {
                 $e = array($elem);
                 $temp = array_merge($temp, $e);
