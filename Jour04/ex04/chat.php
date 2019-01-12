@@ -32,11 +32,7 @@
         $url_file = "../private/chat";
         $ret = get_data($url_file);
         if ($ret == "")
-        {
-            header('Location: create.html');
-            echo "EROOR\n";
             return array();
-        }
         return $ret;
     }
 
