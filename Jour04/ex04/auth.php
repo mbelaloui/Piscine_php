@@ -1,7 +1,7 @@
 <?php
     function read_file($url_file)
     {
-        if (!file_exists($dir))
+        if (!file_exists($url_file))
             return false;
         $fp = fopen($url_file, "r");
         if (flock($fp, LOCK_SH))

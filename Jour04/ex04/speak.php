@@ -1,10 +1,9 @@
 <?php
     session_start();
-    header('Location: modif.html');
 
     function read_file($url_file)
     {
-        if (!file_exists($dir))
+        if (!file_exists($url_file))
            return false;
         $fp = fopen($url_file, "r");
         if (flock($fp, LOCK_SH))
@@ -18,7 +17,7 @@
 
     function write_file($url_file, $data)
     {
-        if (!file_exists($dir))
+        if (!file_exists($url_file))
             return false;
         $fp = fopen($url_file, "a");
         if (flock($fp, LOCK_EX))
@@ -65,10 +64,7 @@
         $url_file = "../private/chat";
         creat_file ($dir, $url_file);
         if (!send_msg($url_file, $log, $msg))
-        {
-            header('Location: create.html');
             echo "EROOR\n";
-        }
     }
 
     if ($_SESSION['loggued_on_user']!= "")
