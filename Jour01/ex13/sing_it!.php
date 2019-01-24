@@ -15,7 +15,7 @@
                     if (rand(0, 1))
                         echo "Nan c'est parce que c'est le premier avril\n";
                     else
-                    echo "Oui il a vraiment des enfants\n";
+                        echo "Oui il a vraiment des enfants\n";
                 }
         }
     }
