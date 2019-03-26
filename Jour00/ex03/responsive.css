@@ -13,44 +13,41 @@ header
 #tableau_bis
 {
     width:  75%;
-    min-width: 1091px;
     margin: 30px auto;
 }
 
 td
 {
-    width:  5% ;
-    height: 5% ;
     text-align: center;
+}
+
+.poid
+{
+    margin: 0;
+    position: relative;
+    float: right;
+    font-size: 1vw;
+}
+
+.symbol
+{
+    font-size: 1vw;
+    margin: 0;
 }
 
 .name
 {
     position: relative;
-    top: 20px;
-    margin-top: 50px;
-    font-size: 12px;
+    font-size: 1vw;
+    margin: 0;
 }
 
 .num
 {
     position: relative;
     float: left;
-    top: 49px;
-    font-size: 12px;
-}
-
-.symbol
-{
-    font-size: 25px;
-}
-
-.poid
-{
-    position: relative;
-    top : -64px;
-    float: right;
-    font-size: 12px;
+    font-size: 1vw;
+    margin: 0;
 }
 
 .l

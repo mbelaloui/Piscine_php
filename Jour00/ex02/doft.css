@@ -263,6 +263,30 @@ header
     margin-top: 48px;
     margin-left: -72px;
 }
+
+#ikea
+{
+    position: absolute;
+    margin-top: 372px;
+    margin-left: 520px;
+
+    border-radius: solid;
+    height: 80px;
+    width: 40px;
+}
+
+#appel
+{
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 853px;
+
+    border-radius: solid;
+    height: 100px;
+    width: 140px;
+    position: absolute;
+}
+
 /*
 #brick2
 {

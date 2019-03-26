@@ -21,7 +21,9 @@
     if ($argc > 2)
     {
         $key = $argv[1];
-        $temp = get_param($argv);
-        echo "$temp[$key]\n";
+		$temp = get_param($argv);
+        echo "$temp[$key]";
+		if (!empty($temp[$key]))
+        	echo "\n";
     }
 ?>
