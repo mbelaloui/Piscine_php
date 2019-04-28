@@ -12,7 +12,7 @@
                 echo "<html><body>\n"
                 ."Bonjour Zaz<br />\n"
                 ."<img src='data:"
-                ."image/png"
+                ."image/jpeg"
                 .";base64,".base64_encode($val_file)."'>\n"
                 ."</body></html>";
             }
@@ -24,7 +24,7 @@
             header('HTTP/1.1 401 Unauthorized');
             echo "<html><body>"
             ."Cette zone est accessible uniquement aux membres du site"
-            ."</body></html>";
+            ."</body></html>\n";
         }
     }
     else
