@@ -29,6 +29,7 @@
             case "-" : return ($a - $b);
             case "*" : return ($a * $b);
             case "/" : return ($a / $b);
+            case "%" : return ($a % $b);
             default : echo "error";
         }
     }

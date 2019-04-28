@@ -9,7 +9,7 @@
         {
             $in = trim($in);
             $tab = explode(';',trim($in));
-            if (($tab[2] != "moulinette") && is_numeric($tab[1]))
+	    if (($tab[2] != "moulinette") && is_numeric($tab[1]))
             {
                 $somme += $tab[1];
                 $cp++;
@@ -22,7 +22,6 @@
     function get_moyenne_user($file)
     {
         sort($file);
-
         $pt = 1;
         $max = count($file);
         while ($pt < $max)
@@ -55,7 +54,6 @@
     function get_ecart_moulinette($file)
     {
         sort($file);
-
         $pt = 1;
         $max = count($file);
         while ($pt < $max)
