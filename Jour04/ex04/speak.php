@@ -1,5 +1,6 @@
 <?php
     session_start();
+    date_default_timezone_set("Europe/Paris");
 
     function read_file($url_file)
     {
@@ -42,7 +43,7 @@
         $elem = array
             (   
                 "login" => $login,
-                "time" => time("Europe/Paris"),
+                "time" => time(),
                 "msg" => $msg,
             );
         if (($data = read_file($url_file)) === false)
