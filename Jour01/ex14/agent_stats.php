@@ -102,10 +102,7 @@
                 get_moyenne_user($file);
                 break;
             case "ecart_moulinette":
-            {
-                echo "ecart_moulinette\n";
                 get_ecart_moulinette($file);
-            }
         }
     }
 ?>
