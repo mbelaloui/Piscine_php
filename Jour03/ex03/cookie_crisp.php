@@ -9,12 +9,14 @@
 		} 
 		case "set" :
 		{
-			setcookie($_GET["name"],$_GET["value"], time() + (86400 * 30), "/");
+			if (isset($_GET["value"]) && isset($_GET["name"]))
+				setcookie($_GET["name"],$_GET["value"], time() + (86400 * 30), "/");
 			break;
 		}
 		case "del" :
 		{
-			setcookie($_GET["name"],"", time() - (86400 * 30));
+			if (isset($_GET["name"]))
+				setcookie($_GET["name"],"", time() - (86400 * 30));
 			break;
 		}
 	}
