@@ -51,10 +51,13 @@
 
     function read_file($url_file)
     {
-        if (flock($url_file, LOCK_EX))
+        if (!file_exists($url_file))
+            return false;
+        $fp = fopen($url_file, "r");
+        if (flock($fp, LOCK_SH))
         {
             $ret = file_get_contents($url_file);
-            flock($url_file, LOCK_UN);
+            flock($fp, LOCK_UN);
             return $ret;
         } else
             return false;
@@ -62,17 +65,20 @@
 
     function write_file($url_file, $data)
     {
-        if (flock($url_file, LOCK_EX))
+        if (!file_exists($url_file))
+            return false;
+        $fp = fopen($url_file, "a");
+        if (flock($fp, LOCK_EX))
         {
             file_put_contents($url_file, $data);
-            flock($url_file, LOCK_UN);
+            flock($fp, LOCK_UN);
+            return true;
         } else
             return false;
     }
 
     function add_compt($url_file, $login, $passwd)
     {
-        //struct    [[key=>val;key=>val],[key=>val;key=>val],[key=>val;key=>val],....]
         $elem = array
             (   
                 "login" => $login,
@@ -94,15 +100,14 @@
     }
 
     header('Location: index.html');
-    if ($_POST['login'] != "" && $_POST['passwd'] != "" && $_POST['submit'] == "OK")
+    
+    if ($_POST['login'] != "" and $_POST['passwd'] != "" and $_POST['submit'] == "OK")
     {
         $dir = "../private";
         $url_file = "../private/passwd";
         creat_file ($dir, $url_file);
         if (add_compt($url_file, $_POST['login'], hash("whirlpool", $_POST['passwd'])))
-        {
             echo "OK\n";
-        }
         else
         {
             header('Location: create.html');
