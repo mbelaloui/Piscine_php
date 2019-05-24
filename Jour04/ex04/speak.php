@@ -70,7 +70,7 @@
 
     if ($_SESSION['loggued_on_user']!= "")
     {
-        if ($_POST["submit"] == "OK")
+        if (array_key_exists("submit",$_POST) && $_POST["submit"] == "OK")
             do_job($_SESSION['loggued_on_user'], $_POST["msg"]);
         ?>
         <!DOCTYPE html>
