@@ -1,91 +1,65 @@
-var	ft_list;
-var	cookie;
-
 $(document).ready(function ()
 {
-	document.getElementById("button_new").addEventListener("click", addTodo);
-	$('#button_new').click('click');
-	ft_list = $('#ft_list');
-	var get = getCookie("todos");
-	console.log(JSON.parse(get));
-	cookie = JSON.parse(get);
-	cookie.forEach(function (e)
+	readCookie();
+	$("#button_new").click(function()
 	{
-		addEntry(e);	
-	})
+		var all_cookies = document.cookie;
+		var list_cookies = all_cookies.split(";");
+		var max_id = 0;
+		for (var p = 0; p < list_cookies.length; p++)
+		{
+			var temp = list_cookies[p].split("=");
+			if (temp[0])
+				max_id = temp[0];
+			else
+				max_id = 0;
+		}
+		var id = parseInt(max_id) + 1;
+		task = prompt("Add things to do.", "task"+id);
+		if (task)
+		{
+			var new_cookie = id+"="+task+"; expires=; path=/";
+			document.cookie = new_cookie;
+			addEntry(task, id);
+		}
+	});
 });
 
-window.onunload = function ()
-{
-	console.log("unload");
-	saveCookie();
-}
-
-function saveCookie()
-{
-	var entries = ft_list.children();
-	var tmp = [];
-	for (var i = 0; i < entries.length; i++)
-	{
-		if (entries[i].tagName == 'DIV')	
-		{
-			tmp.unshift(entries[i].innerHTML);
-			console.log(entries[i].innerHTML);
-		}
-	}
-	var toset = JSON.stringify(tmp);
-	console.log(toset);
-	setCookie("todos", toset, 1);
-}
-
-function setCookie(cname,cvalue,exdays)
-{
-	var d = new Date();
-	d.setTime(d.getTime() + (exdays*24*60*60*1000));
-	var expires = "expires=" + d.toGMTString();
-	var string = cname + "=" + cvalue + ";" + expires + ";path=/";
-	document.cookie = string; 
-}
-
-function getCookie(cname)
-{
-	var name = cname + "=";
-	console.log(document.cookie);
-	var ca = document.cookie.split(';');
-	for(var i = 0; i < ca.length; i++)
-   	{
-		var c = ca[i];
-		while (c.charAt(0) == ' ')
-			c = c.substring(1);
-
-		if (c.indexOf(name) == 0) 
-			return c.substring(name.length, c.length);
-	}
-	return "";
-}
-
-function addTodo()
-{
-	var txt = prompt("Add things to do.", "Nothing special!");
-	if (txt)
-	{
-		addEntry(txt);
-	}
-}
-
-function addEntry(txt)
+function addEntry(task, id)
 {
 	var div = document.createElement("div");
 	div.className = "entry";
-	div.innerHTML = txt;
-	div.addEventListener("click", deleteEntry);
-	ft_list.insertBefore(div, ft_list.firstChild);
+	div.innerHTML = task;
+	div.id = id;
+	$('#h').after(div);
+	$("#"+id).click(function()
+	{
+		if(confirm("Delete entry num :" + this.id+" ?"))
+		{
+			this.parentElement.removeChild(this);
+			var all_cookies = document.cookie.split(';');
+			for (var i = 0; i < all_cookies.length; i++ )
+			{
+				var temp = all_cookies[i].split("=");
+				if (this.id == temp[0].replace(" ", ""))
+				{
+					document.cookie = this.id+"=; expires= Thu, 01 Jan 1970 00:00:00 GMT ; path=/";
+					break;
+				}
+			}
+		}
+	});
 }
 
-function deleteEntry()
+function readCookie() 
 {
-	if(confirm("Delete this entry?"))
+	var x = document.cookie.split(';');
+	for (var i = 0; i < x.length; i++ )
 	{
-		this.parentElement.removeChild(this);
+		var task = x[i].split("=");
+		if (task[1])
+		{
+			addEntry(task[1], task[0].replace(" ", ""));
+		}
 	}
 }

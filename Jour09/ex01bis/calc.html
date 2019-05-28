@@ -22,22 +22,20 @@
 		{
 			alert("Please, use me...");
 		}
+
 		$('#sub').click(function()
 		{
 			var left = $('#left').val();
 			var right = $('#right').val();
+
 			var el = $('#op');
 			var op = el.find(":selected").text();
+
 			if (left === "" || right === "" || isNaN(left) || isNaN(right))
 			{
 				alert("Error :(");
 				return ;
-			}
-			if (left != parseInt(left, 10) || right != parseInt(right, 10))
-			{
-				alert("Error :(");
-				return ;
-			}
+			}			
 			left = parseInt(left);
 			right = parseInt(right);
 			if (left < 0 || right < 0)
