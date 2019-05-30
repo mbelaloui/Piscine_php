@@ -59,13 +59,13 @@ $requested_fighters = Array(
 
 $actual_fighters = Array(
 );
-
 foreach ($requested_fighters as $rf) {
 	$f = $uf->fabricate($rf);
 	if ($f != null) {
 		array_push($actual_fighters, $f);
 	}
 }
+
 
 $targets = Array("the Hound", "Tyrion", "Podrick");
 

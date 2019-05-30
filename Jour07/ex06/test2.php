@@ -29,6 +29,8 @@ foreach ($requested_fighters as $rf) {
 	}
 }
 
+
+
 $targets = Array("the Hound", "Tyrion", "Podrick");
 
 foreach ($actual_fighters as $f) {

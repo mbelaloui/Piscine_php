@@ -1,19 +1,18 @@
 <?php
 	class NightsWatch implements IFighter
 	{
-		private $array_recrut;
-		public function recruit($some)
+		private $garde;
+
+		public function recruit($personne)
 		{
-			if ($some instanceof IFighter)
-			{
-				$this->array_recrut[] = $some;
-			}
+			if ($personne instanceof IFighter)
+				$this->garde[] = $personne;
 		}
+
 		public function fight()
 		{
-			foreach ($this->array_recrut as $key => $value) {
+			foreach ($this->garde as $key => $value) 
 				$value->fight();
-			}
 		}
 	}
 ?>
