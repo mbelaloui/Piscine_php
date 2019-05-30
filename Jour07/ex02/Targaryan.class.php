@@ -5,16 +5,10 @@
 	  	{
 			return FALSE;
 		}
+
 	  	public function getBurned()
 	  	{
-	  		if ($this->resistsFire() === TRUE) 
-	  		{
-	  			return ("emerges naked but unharmed");
-	  		}
-	  		else
-	  		{
-	  			return ("burns alive");
-	  		}
+			return ($this->resistsFire()) ? ("emerges naked but unharmed"): ("burns alive");
 	  	}
 	}  
 ?>

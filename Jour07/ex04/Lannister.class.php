@@ -3,8 +3,7 @@
 	  {
 	  	public function sleepWith($obj_clas)
 		{
-			print($this->With($obj_clas));
-			print(PHP_EOL);
+			print($this->sleep($obj_clas).PHP_EOL);
 		}
 	  }  
 ?>
