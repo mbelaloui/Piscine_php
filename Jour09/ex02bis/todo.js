@@ -15,7 +15,7 @@ $(document).ready(function ()
 				max_id = 0;
 		}
 		var id = parseInt(max_id) + 1;
-		task = prompt("Add things to do.", "task"+id);
+		task = prompt("Add things to do :", "task"+id);
 		if (task)
 		{
 			var new_cookie = id+"="+task+"; expires=; path=/";
@@ -34,7 +34,7 @@ function addEntry(task, id)
 	$('#h').after(div);
 	$("#"+id).click(function()
 	{
-		if(confirm("Delete entry num :" + this.id+" ?"))
+		if(confirm("Delete entry id :" + this.id+" ?"))
 		{
 			this.parentElement.removeChild(this);
 			var all_cookies = document.cookie.split(';');

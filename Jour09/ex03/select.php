@@ -1,7 +1,7 @@
 <?php
 	$array = array();
-	$lines = file('list.csv');
-	foreach ($lines as $lineNumber => $lineContent)
+	$list = file('list.csv');
+	foreach ($list as $lineNumber => $lineContent)
 	{
 		array_push($array, $lineContent);
 	}

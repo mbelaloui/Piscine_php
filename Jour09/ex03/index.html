@@ -1,50 +1,54 @@
-<html>
-	<head>
-		<title>AJAX</title>
-	</head>
-		<style>
-		#ft_list div{
-   border: 1px solid #e2e2e2;
-    height: 100px;
-    padding-top: 79px;
-    text-align: center;
-    width: 300px;
-		}
-		#new{
-			  border-radius: 6px;
-    font-size: 18px;
-    line-height: 1.33333;
-    padding: 10px 16px;
-        background-color: #fff;
-    border-color: #ccc;
-    color: #333;
-		}
-	</style>
-	<body>
-			<button type='button' id="new">New</button>
-		<div id='ft_list'>
-		</div>
-		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-		<script src='todo.js'></script>
-	 
-
-		<script>
-			function del(i)
-{
-	if (confirm("Avez vous vraiment finis cette tache ?")) 
-	{ 
-		var ide = $(i).attr('id');
-		$.ajax({
-			url : 'delete.php',
-			data : 'id='+ ide,
-			type : 'GET',
-			dataType : 'html',
-			success : function(code_html, statut){ // code_html contient le HTML renvoyé
-				$(i).remove();
-	       }
-		})
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Todo List</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous"></script>
+  <style>
+	body
+	{
+		background-color: lightGray;
 	}
-}
-		</script>
-	</body>
+	div.container
+	{
+		background-color: white;
+		margin: 10% auto auto 200px;
+		width: 50vw;
+		border: 1px solid black;
+	}
+	
+	div.entry
+	{
+		text-align: center;
+		border: 1px solid lightGray;
+		font-size:15px;
+		padding: 10px 0 10px 0;
+		
+	}
+	h1.title
+	{
+		text-align: center;
+	}
+	button.new
+	{
+		display: block;
+		width:100%;
+		height:60px;
+		background-color:#ffffff;
+		border:1px solid black;
+		font-size:30px;
+		float: right;
+	}
+	</style>
+	<script src="todo.js"></script>
+</head>
+<body>
+<div class="container">
+	<h1 class="title"  id="h"> FT LIST</h1>
+	<div class="ft_list" id="ft_list">
+		<button id="button_new" name="new" class="new">New</div>
+	</div>
+</div>
+</body>
 </html>

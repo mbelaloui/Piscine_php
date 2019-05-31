@@ -1,51 +1,68 @@
-var i =0;
+var i = 0;
+
 function strIsEmpty(str) {
 	return (str.length === 0 || !str.trim());
 }
-$(document).ready(function(){
 
- 	$.ajax({
-        	url : 'select.php',
-        	type : 'GET',
-        	dataType : 'json',
-        	success : function(code_html, statut){ 
-        		var o = 0;
-        		while (code_html[o])
-        		{
-        			var split = code_html[o].split(";");
-	           		var id = split[0];
-	           		var tak = split[1];
-        			$("#ft_list").prepend("<div onclick=del(this) id="+id+">"+tak+"</div>");
-        			o++;
-        			i++;
-        		}
-	       }
-		})	       
-
-
-    $("#new").click(function(){
-    	
-    	var persson = prompt("Entrez la chose a remettre au lendemain");
-    	if (!strIsEmpty(persson)) 
-    	{
-        $.ajax({
-        	url : 'insert.php',
-        	type : 'GET',
-        	data : 'id='+ i +'& task='+persson,
-        	dataType : 'html',
-        	success : function(code_html, statut){ 
-	           var split = code_html.split("-");
-	           var id = split[0];
-	           var tak = split[1];
-	           $("#ft_list").prepend("<div onclick=del(this) id="+id+">"+tak+"</div>");
-	       }
-
-
-
-        });
-		i++;
+function readfile()
+{
+	$.ajax({
+		url : 'select.php',
+		type : 'GET',
+		dataType : 'json',
+		success : function(list_jason, statut)
+		{
+			var elemid = 0;
+			while (list_jason[elemid])
+			{
+				var temp = list_jason[elemid].trim().split(";");
+				var id = temp[0];
+				var task = temp[1];
+				$("#h").after("<div class='entry' onclick=del(this) id="+id+">"+task+"</div>");
+				elemid++;
+				i++;
+			}
+	   }
+	})
 }
-    });
 
+function del(elem)
+{
+	if (confirm("Delete entry this task ?")) 
+	{ 
+		var id = $(elem).attr('id');
+		$.ajax({
+			url : 'delete.php',
+			data : 'id='+ id,
+			type : 'GET',
+			dataType : 'html',
+			success : function(code_html, statut){ // code_html contient le HTML renvoyé
+				$(elem).remove();
+	       }
+		})
+	}
+}
 
+$(document).ready(function(){
+	readfile();
+
+	$("#button_new").click(function()
+	{
+		var todotask = prompt("Add things to do :");
+		if (!strIsEmpty(todotask)) 
+		{
+			$.ajax({
+				url : 'insert.php',
+				type : 'GET',
+				data : 'task='+todotask,
+				dataType : 'html',
+				success : function(code_html, statut)
+				{
+					var temp = code_html.trim().split(";");
+					$("#h").after("<div class='entry' onclick=del(this) id="+temp[0]+">"+temp[1]+"</div>");
+				}
+			});
+			i++;
+		}
+	});
 });
